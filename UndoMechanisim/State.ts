@@ -3,7 +3,7 @@ export class State {
   constructor(content: string) {
     this.setState(content);
   }
-  setState(content: string) {
+  private setState(content: string) {
     this.content = content;
     return;
   }

@@ -1,6 +1,6 @@
-import { History } from "./history";
+import { History } from "./History";
 import { State } from "./State";
-class editor {
+export class editor {
   prevState: State;
   history = new History();
   createState(content: string) {
@@ -17,10 +17,3 @@ class editor {
     return this.prevState;
   }
 }
-
-const newText = new editor();
-newText.createState("I want to go to school");
-newText.createState("I want to go home ");
-newText.undo();
-newText.restore();
-newText.undo();
